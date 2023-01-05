@@ -8,3 +8,6 @@ def initial_load():
     events.drop_duplicates(inplace=True)
     events = pd.concat([events,pd.get_dummies(events['Medal'])], axis='columns')
     return events
+
+
+    
