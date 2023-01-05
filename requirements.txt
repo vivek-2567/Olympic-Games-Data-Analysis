@@ -2,3 +2,4 @@ streamlit
 plotly
 matplotlib
 seaborn
+scipy
