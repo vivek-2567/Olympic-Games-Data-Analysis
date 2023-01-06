@@ -44,3 +44,23 @@ def male_vs_female(df):
     plot_df.rename(columns={'Name_x':'Male','Name_y':'Female'},inplace = True)
     plot_df.fillna(0,inplace = True)
     return plot_df
+
+
+
+def w_age_sports(df,medal):
+    athlete_df = df.drop_duplicates(subset=['Name', 'region'])
+    x = []
+    name = []
+    sports = ['Speed Skating', 'Cross Country Skiing', 'Ice Hockey', 'Biathlon',
+       'Alpine Skiing', 'Luge', 'Bobsleigh', 'Figure Skating',
+       'Nordic Combined', 'Freestyle Skiing', 'Ski Jumping', 'Curling',
+       'Snowboarding', 'Short Track Speed Skating', 'Skeleton',
+       'Military Ski Patrol']
+
+    for sport in sports:
+        temp_df = athlete_df[athlete_df['Sport'] == sport]
+        x.append(temp_df[temp_df['Medal'] == medal]['Age'].dropna())
+        name.append(sport)
+
+
+    return x,name
