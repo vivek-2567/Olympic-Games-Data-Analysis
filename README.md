@@ -71,3 +71,6 @@ Technologies used in the project:
 
 ## Links
 -[Dataset from Kaggle](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results)
+
+##Feedback
+If you have any feedback please reachout to me @ vivekgoel0207@gmail.com
