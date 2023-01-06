@@ -11,7 +11,7 @@ import plotly.figure_factory as ff
 import Athelete_wise_analysis
 
 st.set_page_config(page_title="Olympic analysis", layout="wide")
-st.markdown("<h1 style='text-align: center; color: White;'>Olympics Data Analysis</h1>",unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: Grey;'>Olympics Data Analysis</h1>",unsafe_allow_html=True)
 
 st.sidebar.image("https://cdn.britannica.com/44/190944-131-7D082864/Silhouette-hand-sport-torch-flag-rings-Olympic-February-3-2015.jpg")
 
