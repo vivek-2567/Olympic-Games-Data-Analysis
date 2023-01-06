@@ -7,15 +7,18 @@
 
 <h2>🚀 Demo</h2>
 
+The project is deployed on the website below. You can have a demo of the project on the below mentioned website.
+
+
 [https://vivek-2567-olympic-games-data-analysis-app-zrn7gl.streamlit.app/](https://vivek-2567-olympic-games-data-analysis-app-zrn7gl.streamlit.app/)
 
-<h2>Project Screenshots:</h2>
+<!-- <h2>Project Screenshots:</h2>
 
 ![]("https://github.com/vivek-2567/Olympic-Games-Data-Analysis/blob/main/Summer-olympic.gif")
 
 ![]("https://github.com/vivek-2567/Olympic-Games-Data-Analysis/blob/main/winter%20olympics.gif")
 
-![]("https://github.com/vivek-2567/Olympic-Games-Data-Analysis/blob/main/changing%20theme.gif")
+![]("https://github.com/vivek-2567/Olympic-Games-Data-Analysis/blob/main/changing%20theme.gif") -->
 
   
   
