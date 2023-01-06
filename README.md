@@ -11,11 +11,11 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://github.com/vivek-2567/Olympic-Games-Data-Analysis/blob/main/Summer-olympic.gif" alt="project-screenshot" width="400" height="400/">
+![]("https://github.com/vivek-2567/Olympic-Games-Data-Analysis/blob/main/Summer-olympic.gif")
 
-<img src="https://github.com/vivek-2567/Olympic-Games-Data-Analysis/blob/main/winter%20olympics.gif" alt="project-screenshot" width="400" height="400/">
+![]("https://github.com/vivek-2567/Olympic-Games-Data-Analysis/blob/main/winter%20olympics.gif")
 
-<img src="https://github.com/vivek-2567/Olympic-Games-Data-Analysis/blob/main/changing%20theme.gif" alt="project-screenshot" width="400" height="400/">
+![]("https://github.com/vivek-2567/Olympic-Games-Data-Analysis/blob/main/changing%20theme.gif")
 
   
   
