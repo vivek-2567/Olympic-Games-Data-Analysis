@@ -92,32 +92,32 @@ if season_radio == 'Summer Olympics':
         col1, col2, col3 = st.columns(3)
 
         with col1:
-            st.markdown("<h2 style='text-align: center; color: White;'>Editions</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{editions}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Editions</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{editions}</h1>""",unsafe_allow_html=True)
 
             st.subheader("")
 
-            st.markdown("<h2 style='text-align: center; color: White;'>Events</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{events}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Events</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{events}</h1>""",unsafe_allow_html=True)
         
         with col2:
-            st.markdown("<h2 style='text-align: center; color: White;'>Hosts</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{cities}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Hosts</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{cities}</h1>""",unsafe_allow_html=True)
 
             st.subheader("")
 
-            st.markdown("<h2 style='text-align: center; color: White;'>Athletes</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{athletes}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Athletes</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{athletes}</h1>""",unsafe_allow_html=True)
 
         
         with col3:
-            st.markdown("<h2 style='text-align: center; color: White;'>Sports</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{sports}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Sports</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{sports}</h1>""",unsafe_allow_html=True)
 
             st.subheader("")
 
-            st.markdown("<h2 style='text-align: center; color: White;'>Nations</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{nations}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Nations</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{nations}</h1>""",unsafe_allow_html=True)
 
         st.write(' ')
         st.write(' ')
@@ -290,7 +290,7 @@ elif season_radio == 'Winter Olympics':
 
         st.header("Overall Analysis")
         
-        editions = df['Year'].unique().shape[0] - 1
+        editions = df['Year'].unique().shape[0]
         cities = df['City'].unique().shape [0]
         sports = df['Sport' ].unique().shape [0]
         events = df['Event'].unique() .shape [0]
@@ -300,32 +300,32 @@ elif season_radio == 'Winter Olympics':
         col1, col2, col3 = st.columns(3)
 
         with col1:
-            st.markdown("<h2 style='text-align: center; color: White;'>Editions</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{editions}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Editions</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{editions}</h1>""",unsafe_allow_html=True)
 
             st.subheader("")
 
-            st.markdown("<h2 style='text-align: center; color: White;'>Events</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{events}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Events</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{events}</h1>""",unsafe_allow_html=True)
         
         with col2:
-            st.markdown("<h2 style='text-align: center; color: White;'>Hosts</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{cities}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Hosts</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{cities}</h1>""",unsafe_allow_html=True)
 
             st.subheader("")
 
-            st.markdown("<h2 style='text-align: center; color: White;'>Athletes</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{athletes}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Athletes</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{athletes}</h1>""",unsafe_allow_html=True)
 
         
         with col3:
-            st.markdown("<h2 style='text-align: center; color: White;'>Sports</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{sports}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Sports</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{sports}</h1>""",unsafe_allow_html=True)
 
             st.subheader("")
 
-            st.markdown("<h2 style='text-align: center; color: White;'>Nations</h2>",unsafe_allow_html=True)
-            st.markdown(f"""<h1 style='text-align: center; color: White;'>{nations}</h1>""",unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: Dark Grey;'>Nations</h2>",unsafe_allow_html=True)
+            st.markdown(f"""<h1 style='text-align: center; color: Dark Grey;'>{nations}</h1>""",unsafe_allow_html=True)
 
         st.write(' ')
         st.write(' ')
