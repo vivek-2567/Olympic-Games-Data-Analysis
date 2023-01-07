@@ -1,4 +1,4 @@
-<!-- # Olympic-Games-Data-Analysis --!>
+
 <h1 align="center" id="title">Olympic Games Data Analysis</h1>
 
 <p align="center"><img src="https://socialify.git.ci/vivek-2567/Olympic-Games-Data-Analysis/image?description=1&descriptionEditable=Data%20Analysis%20on%20Olympic%20Games%20till%202016...&font=Jost&name=1&owner=1&pattern=Signal&theme=Light" alt="project-image"></p>
@@ -18,7 +18,7 @@
 <p>-You can even change the theme of the app by going to settings from the top right corner of the app.</p>
 
 
-[https://vivek-2567-olympic-games-data-analysis-app-zrn7gl.streamlit.app/](https://vivek-2567-olympic-games-data-analysis-app-zrn7gl.streamlit.app/)
+[Click for Live DEMO here](https://vivek-2567-olympic-games-data-analysis-app-zrn7gl.streamlit.app/)
 
 <!-- <h2>Project Screenshots:</h2>
 
