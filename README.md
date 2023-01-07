@@ -7,15 +7,15 @@
 
 <h2>🚀 Demo</h2>
 
--The project is deployed on the website below. You can have a demo of the project on the below mentioned website.
+<p>-The project is deployed on the website below. You can have a demo of the project on the below mentioned website.</p>
 
--This website has interrective ploting elements and you can hover over the plot to get some data about it.
+<p>-This website has interrective ploting elements and you can hover over the plot to get some data about it.</p>
 
--You can also double click on a legend entry to isolate it from others or single click on a legend to isolate the clicked one.
+<p>-You can also double click on a legend entry to isolate it from others or single click on a legend to isolate the clicked one.</p>
 
--You can choose any options from dropdown menu.
+<p>-You can choose any options from dropdown menu.</p>
 
--You can even change the theme of the app by going to settings from the top right corner of the app.
+<p>-You can even change the theme of the app by going to settings from the top right corner of the app.</p>
 
 
 [Click here for Live DEMO](https://vivek-2567-olympic-games-data-analysis-app-zrn7gl.streamlit.app/)
