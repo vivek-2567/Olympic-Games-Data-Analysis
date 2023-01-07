@@ -18,7 +18,7 @@
 <p>-You can even change the theme of the app by going to settings from the top right corner of the app.</p>
 
 
-[Click for Live DEMO here](https://vivek-2567-olympic-games-data-analysis-app-zrn7gl.streamlit.app/)
+[Click here for Live DEMO](https://vivek-2567-olympic-games-data-analysis-app-zrn7gl.streamlit.app/)
 
 <!-- <h2>Project Screenshots:</h2>
 
