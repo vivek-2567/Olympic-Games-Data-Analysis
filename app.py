@@ -9,31 +9,49 @@ import seaborn as sns
 import countrywise_analysis
 import plotly.figure_factory as ff
 import Athelete_wise_analysis
+from streamlit_option_menu import option_menu
+
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.set_page_config(page_title="Olympic analysis", layout="wide")
 st.markdown("<h1 style='text-align: center; color: Dark Grey;'>Olympics Data Analysis</h1>",unsafe_allow_html=True)
 
 st.sidebar.image("https://cdn.britannica.com/44/190944-131-7D082864/Silhouette-hand-sport-torch-flag-rings-Olympic-February-3-2015.jpg")
+st.sidebar.write("##")
+with st.sidebar:
+    season_radio = option_menu(
+        menu_title = "Season",
+        options = ['Summer Olympics','Winter Olympics'],
+        icons = ['thermometer-sun','thermometer-snow'],
+        menu_icon = 'thermometer',
+        default_index = 0,
+        orientation = 'horizontal',
+        styles={
+            "icon": {"font-size": "15px"},
+            "nav-link": {"font-size": "15px"}
+        }
+    )
 
-st.sidebar.title("Choose a season")
-
-season_radio = st.sidebar.radio(
-    " ",
-    ['Summer Olympics','Winter Olympics']
-)
-
-st.sidebar.write("")
-st.sidebar.write("")
-st.sidebar.write("")
-st.sidebar.write("")
+st.sidebar.write("##")
 st.sidebar.image("https://stillmed.olympics.com/media/Images/B2B/Beyond-The-Games/CTA/Sustainability-CTA.jpg")
 
 if season_radio == 'Summer Olympics':
-    tab1, tab2, tab3, tab4,tab5 = st.tabs(
-        ["About Olympics", "Medal Census", "Overall Analysis", "Country wise Analysis","Athelete wise Analysis"]
+    tab = option_menu(
+        menu_title = None,
+        options = ["About Olympics", "Leader Board", "Overall Analysis", "Country wise Analysis","Athelete wise Analysis", "Get in Touch with Me"],
+        icons = ['cursor','table','clipboard-data','globe','bar-chart-line',"envelope-open"],
+        default_index = 0,
+        orientation = 'horizontal',
+        # styles={
+        #     "icon": {"font-size": "15px"},
+        #     "nav-link": {"font-size": "15px"}
+        # }
     )
 
-    with tab1:
+    if tab == "About Olympics":
+        st.write("##")
         f = open('about.txt','r')
         data = f.readlines()
         st.write(data[0])
@@ -55,7 +73,7 @@ if season_radio == 'Summer Olympics':
         st.write(data[12])
 
 
-    with tab2:
+    elif tab == "Leader Board":
         df = ps.s_initial_load()
 
         col1,col2 = st.columns(2)
@@ -77,7 +95,7 @@ if season_radio == 'Summer Olympics':
         st.table(df)
 
 
-    with tab3:
+    elif tab == "Overall Analysis":
         df = ps.s_initial_load()
 
         st.header("Overall Analysis")
@@ -165,7 +183,7 @@ if season_radio == 'Summer Olympics':
         st.table(overall_analysis.best_player(df,sport_select))
 
 
-    with tab4:
+    elif tab == "Country wise Analysis":
         df = ps.s_initial_load()
 
         col1, col2, col3 = st.columns(3)
@@ -192,7 +210,7 @@ if season_radio == 'Summer Olympics':
         st.subheader("Top 10 players from "+country_select)
         st.table(countrywise_analysis.best_player(df,country_select))
 
-    with tab5:
+    elif tab == "Athelete wise Analysis":
         df = ps.s_initial_load()
 
         st.subheader("Distribution of age wrt Medals Won")
@@ -234,15 +252,40 @@ if season_radio == 'Summer Olympics':
         fig = px.line(Athelete_wise_analysis.male_vs_female(df),x = 'Year', y = ['Male','Female'])
         st.plotly_chart(fig)
 
+    elif tab == "Get in Touch with Me":
+        contact_form = '''
+        <form action="https://formsubmit.co/tokas.2sonu@gmail.com" method="POST">
+            <input type="hidden" name="_autoresponse" value="Thank You for spending your valuable time on my website. I will contact you soon.">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://vivek-2567-olympic-games-data-analysis-app-zrn7gl.streamlit.app">
+            <input type="text" name="name" id = 'input' placeholder = "Your Name" required>
+            <input type="email" name="email" id = 'input' placeholder = "Your Email" required>
+            <textarea name = 'message' id = 'input' placeholder = 'Your Message' required></textarea>
+            <button onclick="document.getElementById('input').value = ''" type="submit">Send</button>
+        </form>
+        '''
+
+        st.write("##")
+        st.markdown(contact_form,unsafe_allow_html=True)
+        local_css("style/style.css")
+
 
 
 elif season_radio == 'Winter Olympics':
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(
-        ["About Olympics","Medal Census", "Overall Analysis", "Country wise Analysis","Athelete wise Analysis"]
+
+    tab = option_menu(
+        menu_title = None,
+        options = ["About Olympics", "Leader Board", "Overall Analysis", "Country wise Analysis","Athelete wise Analysis", "Get in Touch with Me"],
+        icons = ['cursor','table','clipboard-data','globe','bar-chart-line',"envelope-open"],
+        default_index = 0,
+        orientation = 'horizontal',
+        # styles={
+        #     "icon": {"font-size": "15px"},
+        #     "nav-link": {"font-size": "15px"}
+        # }
     )
 
-
-    with tab1:
+    if tab == "About Olympics":
         f = open('about.txt','r')
         data = f.readlines()
         st.write(data[0])
@@ -263,7 +306,7 @@ elif season_radio == 'Winter Olympics':
         st.write(data[10])
         st.write(data[12])
 
-    with tab2:
+    elif tab == "Leader Board":
         df = ps.w_initial_load()
 
         col1,col2 = st.columns(2)
@@ -285,7 +328,7 @@ elif season_radio == 'Winter Olympics':
         st.table(df)
 
 
-    with tab3:
+    elif tab == "Overall Analysis":
         df = ps.w_initial_load()
 
         st.header("Overall Analysis")
@@ -373,7 +416,7 @@ elif season_radio == 'Winter Olympics':
         st.table(overall_analysis.best_player(df,sport_select))
 
 
-    with tab4:
+    elif tab == "Country wise Analysis":
         df = ps.w_initial_load()
 
         col1, col2, col3 = st.columns(3)
@@ -400,7 +443,7 @@ elif season_radio == 'Winter Olympics':
         st.subheader("Top 10 players from "+country_select)
         st.table(countrywise_analysis.best_player(df,country_select))
 
-    with tab5:
+    elif tab == "Athelete wise Analysis":
         df = ps.w_initial_load()
 
         st.subheader("Distribution of age wrt Medals Won")
@@ -441,3 +484,21 @@ elif season_radio == 'Winter Olympics':
         st.subheader("Male vs Female Participation")
         fig = px.line(Athelete_wise_analysis.male_vs_female(df),x = 'Year', y = ['Male','Female'])
         st.plotly_chart(fig)
+
+
+    elif tab == "Get in Touch with Me":
+        contact_form = '''
+        <form action="https://formsubmit.co/tokas.2sonu@gmail.com" method="POST">
+            <input type="hidden" name="_autoresponse" value="Thank You for spending your valuable time on my website. I will contact you soon.">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://vivek-2567-olympic-games-data-analysis-app-zrn7gl.streamlit.app">
+            <input type="text" name="name" id = 'input' placeholder = "Your Name" required>
+            <input type="email" name="email" id = 'input' placeholder = "Your Email" required>
+            <textarea name = 'message' id = 'input' placeholder = 'Your Message' required></textarea>
+            <button onclick="document.getElementById('input').value = ''" type="submit">Send</button>
+        </form>
+        '''
+
+        st.write("##")
+        st.markdown(contact_form,unsafe_allow_html=True)
+        local_css("style/style.css")
