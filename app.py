@@ -44,10 +44,10 @@ if season_radio == 'Summer Olympics':
         icons = ['cursor','table','clipboard-data','globe','bar-chart-line',"envelope-open"],
         default_index = 0,
         orientation = 'horizontal',
-        # styles={
-        #     "icon": {"font-size": "15px"},
-        #     "nav-link": {"font-size": "15px"}
-        # }
+        styles={
+            "icon": {"font-size": "18px"},
+            "nav-link": {"font-size": "16px", "text-align": "centre"}
+        }
     )
 
     if tab == "About Olympics":
@@ -279,10 +279,10 @@ elif season_radio == 'Winter Olympics':
         icons = ['cursor','table','clipboard-data','globe','bar-chart-line',"envelope-open"],
         default_index = 0,
         orientation = 'horizontal',
-        # styles={
-        #     "icon": {"font-size": "15px"},
-        #     "nav-link": {"font-size": "15px"}
-        # }
+        styles={
+            "icon": {"font-size": "18px"},
+            "nav-link": {"font-size": "16px", "text-align": "centre"}
+        }
     )
 
     if tab == "About Olympics":
