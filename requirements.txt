@@ -3,3 +3,4 @@ plotly
 matplotlib
 seaborn
 streamlit-option-menu
+scipy
